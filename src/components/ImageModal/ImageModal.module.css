@@ -1,48 +1,46 @@
-.overlay {
+/* ImageModal.module.css */
+.modal {
+  background: rgba(0, 0, 0, 0.85);
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  max-height: 90%; /* Обмежуємо максимальну висоту модального вікна */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  overflow-y: auto; /* Додаємо прокрутку, якщо контент перевищує висоту */
+}
+
+.modalContent {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
-.modal {
-  position: relative;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  max-width: 80vw;
-  max-height: 80vh;
-  overflow-y: auto;
-  z-index: 1010;
-  animation: fadeIn 0.3s ease-in-out;
+.modalImage {
+  max-width: 100%;
+  max-height: 70vh; /* Обмежуємо висоту зображення */
+  object-fit: cover; /* Це допомагає зробити зображення пропорційним */
+  margin-bottom: 20px;
 }
 
-.modal img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 4px;
-  object-fit: contain;
+.info {
+  color: #fff;
 }
 
 .closeBtn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: transparent;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff6347;
+  color: #fff;
   border: none;
-  font-size: 24px;
+  border-radius: 5px;
   cursor: pointer;
-  color: #333;
-  transition: color 0.2s ease-in-out;
 }
 
 .closeBtn:hover {
-  color: #ff0000;
+  background-color: #ff4500;
 }

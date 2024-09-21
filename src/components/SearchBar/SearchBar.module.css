@@ -1,5 +1,5 @@
 .wrapper {
-  background-color: rgb(26, 98, 231);
+  background-color: orangered;
 
   height: 50px;
 
@@ -11,8 +11,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* gap: 10px; */
 }
 .input {
   border: none;
@@ -24,7 +22,7 @@
   & :hover,
   :focus,
   :active {
-    border: blue solid 2px;
+    border: rgb(255, 0, 0) solid 2px;
   }
 }
 .btn {
