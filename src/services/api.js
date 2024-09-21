@@ -2,7 +2,7 @@ import axios from "axios";
 
 const ACCESS_KEY = "LR1rSDe2-ILjSKqcE30lBZuQfEXqnVEDmhuxhh-1WNI";
 
-export const fetchImages = async (query, page = 1, perPage = 12) => {
+export const fetchImages = async (query, page, perPage) => {
   try {
     const response = await axios.get(`https://api.unsplash.com/search/photos`, {
       params: {
@@ -13,9 +13,12 @@ export const fetchImages = async (query, page = 1, perPage = 12) => {
       },
     });
 
-    return response.data.results;
+    return {
+      results: response.data.results,
+      total: response.data.total,
+    };
   } catch (error) {
     console.error(error);
-    return [];
+    return { results: [], total: 0 };
   }
 };
