@@ -1,0 +1,34 @@
+.wrapper {
+  background-color: rgb(26, 98, 231);
+
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* gap: 10px; */
+}
+.input {
+  border: none;
+  padding-left: 10px;
+  height: 50px;
+  width: 00px;
+  background-color: #fafafa;
+
+  & :hover,
+  :focus,
+  :active {
+    border: blue solid 2px;
+  }
+}
+.btn {
+  border: none;
+  height: 22px;
+  background-color: #fafafa;
+}
